@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OiMundo", "OiMundo\OiMundo.csproj", "{2A520C49-02F9-436A-AE7C-C9A50883A3FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A520C49-02F9-436A-AE7C-C9A50883A3FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A520C49-02F9-436A-AE7C-C9A50883A3FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A520C49-02F9-436A-AE7C-C9A50883A3FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A520C49-02F9-436A-AE7C-C9A50883A3FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04FBC1D4-E62F-46DC-84C7-65B328AE4BB1}
+	EndGlobalSection
+EndGlobal
