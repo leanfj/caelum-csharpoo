@@ -221,5 +221,10 @@ namespace OiMundo
                 
             MessageBox.Show(mensagem);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
