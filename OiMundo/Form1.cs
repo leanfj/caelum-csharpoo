@@ -222,9 +222,34 @@ namespace OiMundo
             MessageBox.Show(mensagem);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button12_Click(object sender, EventArgs e)
         {
+            double valorInvestido = 1000.0;
+
+            //for (int i = 1; i <= 12; i++)
+            //{
+            //    valorInvestido *= 1.01;
+            //}
+
+            //int i = 1;
+            //while ( i <= 12 )
+            //{
+            //    valorInvestido *= 1.01;
+            //    i++;
+            //}
+
+            int i = 1;
+
+            do
+            {
+                valorInvestido *= 1.01;
+                i += 1;
+            } while (i <= 12);
+
+
+            
+            MessageBox.Show("Valor Investido agora é " + valorInvestido.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("pt-BR")));
 
         }
     }
-}
+} 
