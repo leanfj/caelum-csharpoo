@@ -251,5 +251,56 @@ namespace OiMundo
             MessageBox.Show("Valor Investido agora é " + valorInvestido.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("pt-BR")));
 
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            int total = 2;
+            for (int i = 0; i < 5; i += 1)
+            {
+                total = total * 2;
+            }
+
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Cliente leandro = new Cliente();
+            leandro.nome = "Leandro";
+            leandro.idade = 10;
+
+            Conta contaLeandro = new Conta();
+            contaLeandro.Deposita(500.0);
+            contaLeandro.Numero = 1;
+            contaLeandro.Titular = leandro;
+
+            contaLeandro.Titular.rg = "22783115";
+
+            bool deuCerto = contaLeandro.Saca(400.0);
+
+            if (deuCerto)
+            {
+                MessageBox.Show("Saque realizado com sucesso! Saldo restante de " + contaLeandro.PegaSaldo());
+            }
+            else
+            {
+                MessageBox.Show("Saldo insuficiente " + contaLeandro.PegaSaldo());
+            }
+
+
+            MessageBox.Show(contaLeandro.Titular.nome);
+            MessageBox.Show(leandro.rg);
+
+            bool maiorDeIdade = leandro.isMaiorDeIdade();
+ 
+            if (maiorDeIdade)
+            {
+                MessageBox.Show("É maior de idade!");
+            } 
+            else
+            {
+                MessageBox.Show("Não é maior de idade");
+            }
+        }
     }
 } 
