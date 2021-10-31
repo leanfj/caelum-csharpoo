@@ -33,7 +33,8 @@ namespace Banco
             this.textoNumero = new System.Windows.Forms.TextBox();
             this.textoSaldo = new System.Windows.Forms.TextBox();
             this.textoValor = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.botaoDeposito = new System.Windows.Forms.Button();
+            this.botaoSaque = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -64,22 +65,33 @@ namespace Banco
             this.textoValor.Size = new System.Drawing.Size(173, 20);
             this.textoValor.TabIndex = 3;
             // 
-            // button1
+            // botaoDeposito
             // 
-            this.button1.Location = new System.Drawing.Point(239, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Depositar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.botaoDeposito.Location = new System.Drawing.Point(239, 203);
+            this.botaoDeposito.Name = "botaoDeposito";
+            this.botaoDeposito.Size = new System.Drawing.Size(75, 23);
+            this.botaoDeposito.TabIndex = 4;
+            this.botaoDeposito.Text = "Depositar";
+            this.botaoDeposito.UseVisualStyleBackColor = true;
+            this.botaoDeposito.Click += new System.EventHandler(this.botaoDeposito_Click);
+            // 
+            // botaoSaque
+            // 
+            this.botaoSaque.Location = new System.Drawing.Point(337, 203);
+            this.botaoSaque.Name = "botaoSaque";
+            this.botaoSaque.Size = new System.Drawing.Size(75, 23);
+            this.botaoSaque.TabIndex = 5;
+            this.botaoSaque.Text = "Saque";
+            this.botaoSaque.UseVisualStyleBackColor = true;
+            this.botaoSaque.Click += new System.EventHandler(this.botaoSaque_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.botaoSaque);
+            this.Controls.Add(this.botaoDeposito);
             this.Controls.Add(this.textoValor);
             this.Controls.Add(this.textoSaldo);
             this.Controls.Add(this.textoNumero);
@@ -98,7 +110,8 @@ namespace Banco
         private System.Windows.Forms.TextBox textoNumero;
         private System.Windows.Forms.TextBox textoSaldo;
         private System.Windows.Forms.TextBox textoValor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button botaoDeposito;
+        private System.Windows.Forms.Button botaoSaque;
     }
 }
 

@@ -4,9 +4,9 @@
     {
         public string Nome { get; set; }
 
-        public Cliente(string v)
+        public Cliente(string nome)
         {
-            this.Nome = v;
+            this.Nome = nome;
         }
 
     }
