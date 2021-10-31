@@ -265,16 +265,17 @@ namespace OiMundo
 
         private void button14_Click(object sender, EventArgs e)
         {
-            Cliente leandro = new Cliente("Leandro");
-
-            leandro.Idade = 20;
+            Cliente leandro = new Cliente("Leandro")
+            {
+                cpf = "88473695634",
+                rg = "857483679",
+                Idade = 35
+            };
 
             Conta contaLeandro = new Conta();
             contaLeandro.Deposita(500.0);
             contaLeandro.Numero = 1;
             contaLeandro.Titular = leandro;
-
-            contaLeandro.Titular.rg = "22783115";
 
             bool deuCerto = contaLeandro.Saca(400.0);
 
@@ -289,7 +290,8 @@ namespace OiMundo
 
 
             MessageBox.Show(contaLeandro.Titular.Nome);
-            MessageBox.Show(leandro.rg);
+            MessageBox.Show(contaLeandro.Titular.rg);
+            MessageBox.Show(contaLeandro.Titular.cpf);
 
             bool maiorDeIdade = leandro.isMaiorDeIdade();
  
