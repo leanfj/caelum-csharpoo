@@ -6,11 +6,16 @@ namespace OiMundo
 {
     class Cliente
     {
-        public string nome;
+        public string Nome { get; set; }
         public string cpf;
         public string rg;
         public string endereco;
         public int idade;
+
+        public Cliente (string nome)
+        {
+            this.Nome = nome;
+        }
 
         public bool isMaiorDeIdade ()
         {

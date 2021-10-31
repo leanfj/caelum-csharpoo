@@ -265,8 +265,8 @@ namespace OiMundo
 
         private void button14_Click(object sender, EventArgs e)
         {
-            Cliente leandro = new Cliente();
-            leandro.nome = "Leandro";
+            Cliente leandro = new Cliente("Leandro");
+
             leandro.idade = 10;
 
             Conta contaLeandro = new Conta();
@@ -288,7 +288,7 @@ namespace OiMundo
             }
 
 
-            MessageBox.Show(contaLeandro.Titular.nome);
+            MessageBox.Show(contaLeandro.Titular.Nome);
             MessageBox.Show(leandro.rg);
 
             bool maiorDeIdade = leandro.isMaiorDeIdade();
