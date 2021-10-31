@@ -267,7 +267,7 @@ namespace OiMundo
         {
             Cliente leandro = new Cliente("Leandro");
 
-            leandro.idade = 10;
+            leandro.Idade = 20;
 
             Conta contaLeandro = new Conta();
             contaLeandro.Deposita(500.0);

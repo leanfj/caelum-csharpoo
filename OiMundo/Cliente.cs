@@ -10,16 +10,22 @@ namespace OiMundo
         public string cpf;
         public string rg;
         public string endereco;
-        public int idade;
+        public int Idade { get; set; }
 
         public Cliente (string nome)
         {
             this.Nome = nome;
         }
 
+        public Cliente (string nome, int idade)
+        {
+            this.Nome = nome;
+            this.Idade = idade;
+        }
+
         public bool isMaiorDeIdade ()
         {
-            if (idade > 18)
+            if (this.Idade > 18)
             {
                 return true;
             }
