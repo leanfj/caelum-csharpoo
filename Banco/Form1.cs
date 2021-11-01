@@ -14,6 +14,7 @@ namespace Banco
     {
         private Conta conta;
         private ContaPoupanca contaPoupanca;
+        private ContaCorrente contaCorrente;
 
         public Form1()
         {
@@ -23,11 +24,12 @@ namespace Banco
         private void Form1_Load(object sender, EventArgs e)
         {
             this.conta = new Conta();
-            this.contaPoupanca = new ContaPoupanca();
-
-            contaPoupanca.Numero = 2;
-            
+            this.contaPoupanca = new ContaPoupanca(3);
+            this.contaCorrente = new ContaCorrente();
+              
             conta.Numero = 1;
+
+            contaCorrente.Numero = 2;
 
             Cliente clientePoupanca = new Cliente("Gustavo");
 
@@ -37,23 +39,26 @@ namespace Banco
 
             conta.Titular = cliente;
 
+            Cliente clienteCorrente = new Cliente("Palomina");
+
+            contaCorrente.Titular = clienteCorrente;
+
             TotalizadorDeContas totalizadorDeContas = new TotalizadorDeContas();
             totalizadorDeContas.Soma(contaPoupanca);
             totalizadorDeContas.Soma(conta);
 
-
-            textoTitular.Text = contaPoupanca.Titular.Nome;
-            textoNumero.Text = Convert.ToString(contaPoupanca.Numero);
-            textoSaldo.Text = Convert.ToString(contaPoupanca.Saldo);
+            textoTitular.Text = contaCorrente.Titular.Nome;
+            textoNumero.Text = Convert.ToString(contaCorrente.Numero);
+            textoSaldo.Text = Convert.ToString(contaCorrente.Saldo);
         }
 
         private void botaoDeposito_Click(object sender, EventArgs e)
         {
             string valorDigitado = textoValor.Text;
             double valorOperacao = Convert.ToDouble(valorDigitado);
-            this.contaPoupanca.Deposita(valorOperacao);
+            this.contaCorrente.Deposita(valorOperacao);
 
-            textoSaldo.Text = Convert.ToString(this.contaPoupanca.Saldo);
+            textoSaldo.Text = Convert.ToString(this.contaCorrente.Saldo);
 
             textoValor.Text = Convert.ToString(0);
 
@@ -64,8 +69,8 @@ namespace Banco
         {
             string valorDigitado = textoValor.Text;
             double valorOperacao = Convert.ToDouble(valorDigitado);
-            this.contaPoupanca.Saca(valorOperacao);
-            textoSaldo.Text = Convert.ToString(this.contaPoupanca.Saldo);
+            this.contaCorrente.Saca(valorOperacao);
+            textoSaldo.Text = Convert.ToString(this.contaCorrente.Saldo);
             textoValor.Text = Convert.ToString(0);
             MessageBox.Show("Saque realizado com sucesso");
         }
